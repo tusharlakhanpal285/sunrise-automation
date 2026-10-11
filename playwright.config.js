@@ -10,6 +10,7 @@ export default defineConfig({
   reporter: [['html', { open: 'never' }], ['list']],
   use: {
     baseURL: process.env.BASE_URL || 'https://sunrisestationery.in',
+    timezoneId: 'Asia/Kolkata',
     trace: 'on-first-retry',
     screenshot: 'only-on-failure',
     video: 'retain-on-failure',
