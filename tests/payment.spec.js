@@ -6,6 +6,7 @@ function getNumber(text) {
 
 test.describe('Payment options in cart', () => {
   test.beforeEach(async ({ page }) => {
+    await page.clock.setFixedTime(new Date('2026-10-12T12:00:00+05:30'));
     await page.goto('/');
     await page.getByRole('button', { name: 'Add to Cart' }).first().click();
     await page.getByRole('button', { name: /^Cart, 1 item/ }).click();
